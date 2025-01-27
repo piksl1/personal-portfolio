@@ -21,8 +21,6 @@ const Hero = () => {
     const { clientX, clientY } = e;
     x.set(e.clientX);
     y.set(e.clientY);
-
-    console.log(clientX, clientY, x, y);
   };
 
   const handleMouseEnter = () => {
@@ -31,8 +29,6 @@ const Hero = () => {
       innerHeight: window.innerHeight,
     });
     setMouseMove(true);
-
-    console.log(innerWidth, innerHeight);
   };
 
   const { innerWidth, innerHeight } = windowsOffset;
@@ -45,7 +41,7 @@ const Hero = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center gap-y-3 font-light capitalize h-screen"
+      className="flex flex-col items-center justify-center gap-y-3 font-light capitalize min-h-screen px-4 sm:px-8 md:px-16 lg:px-24"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
     >
@@ -64,7 +60,7 @@ const Hero = () => {
             width={400}
             height={400}
             priority
-            className="h-auto w-[150px]"
+            className="h-auto w-[150px] sm:w-[200px] md:w-[250px]"
           />
           <motion.span
             className="absolute text-3xl font-semibold text-white"
@@ -83,7 +79,7 @@ const Hero = () => {
           My name is Wassim Zaoui &
         </h1>
         <p className="text-lg tracking-wider text-gray-500">
-          I focus on front-end development for websites and web applications. 🧐
+          I work on front-end development for websites and web applications. 🧐
         </p>
       </div>
       <div className="flex text-3xl justify-center gap-x-10 mt-8 text-yellow-600 sm:text-2xl">

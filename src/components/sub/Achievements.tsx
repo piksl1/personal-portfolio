@@ -20,8 +20,8 @@ const Achievements = ({ title, amount, children }) => {
   };
 
   return (
-    <div className="flex items-end gap-x-3">
-      <span className="text-4xl lg:text-2xl text-gray-300">{children}</span>
+    <div className="flex flex-col items-center gap-y-3 text-center sm:flex-row sm:justify-between">
+      <span className="text-3xl lg:text-2xl text-gray-300">{children}</span>
       <h1 className="flex flex-col gap-y-2">
         <motion.span
           className="text-2xl lg:text-xl font-light text-yellow-500"
